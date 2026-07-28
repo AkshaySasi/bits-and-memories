@@ -97,7 +97,7 @@ Printing it back out is verbatim extraction, and as far as we can tell nobody
 has measured how it responds to quantization, across bit widths and across
 model scale, against ground-truth memorized data.
 
-That is what this paper does. We use the Pythia suite
+That is what this paper does.\footnote{Code: \url{https://github.com/AkshaySasi/bits-and-memories}. Sampled data and per-configuration results: \url{https://huggingface.co/datasets/AkshaySasi/bits-and-memories}.} We use the Pythia suite
 \citep{biderman2023pythia}, the one family of open models whose training
 corpus, the Pile \citep{gao2020pile}, and whose memorized sequences are both
 public \citep{biderman2023emergent}, so that we never have to guess what a
@@ -608,7 +608,15 @@ All numbers come from seeded runs over the public Pythia memorized-evals set.
 The sampled evaluation sequences are cached and released so that every
 precision level is scored on identical data. The independent RTN quantizer is
 a few lines of group-wise round-to-nearest applied to the linear weights and
-has no external dependency. Code, sampled data, and per-configuration result
-files are available at the repository linked from the author's page.
+has no external dependency. Code is at
+\url{https://github.com/AkshaySasi/bits-and-memories}, and the sampled
+sequences and per-configuration result files are at
+\url{https://huggingface.co/datasets/AkshaySasi/bits-and-memories}.
+
+\section*{Acknowledgements}
+
+AI assistance was used in developing the experiment code and in drafting and
+editing the manuscript. All experiments were designed and executed by the
+author, and all results, claims, and references were verified by the author.
 
 \end{document}
