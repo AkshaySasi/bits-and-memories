@@ -20,3 +20,6 @@ paper/*.pdf
 # os
 .DS_Store
 Thumbs.db
+
+# paper source lives on arXiv, not in the code repo
+paper/
