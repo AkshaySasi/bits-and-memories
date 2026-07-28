@@ -23,3 +23,6 @@ Thumbs.db
 
 # paper source lives on arXiv, not in the code repo
 paper/
+
+# medium article draft is not code
+article/
