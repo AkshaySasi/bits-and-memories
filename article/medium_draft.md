@@ -1,9 +1,9 @@
-# I Asked Whether Shrinking an AI Also Makes It Forget Its Secrets
+# Does Shrinking a Language Model Erase the Private Data It Memorized? I Tested It.
 
-*Everyone compresses their language models before deploying them. A lot of
-people quietly hope this also scrubs the private data the model memorized. I
-tested that hope on real models. The answer is: sort of, but not really, and
-it gets worse the bigger the model.*
+*Everyone quantizes their language models — shrinks them to run on cheaper
+hardware — before deploying them, and many quietly hope it also scrubs the
+memorized private data. It doesn't, and it works even less well the bigger the
+model gets.*
 
 ---
 
