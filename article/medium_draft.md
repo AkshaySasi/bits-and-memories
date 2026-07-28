@@ -66,6 +66,12 @@ tell "the model forgot this specific passage" apart from "I broke the model."
 
 That control turns out to be the whole ballgame.
 
+> **[INSERT IMAGE: figures/method.png — the measurement pipeline]**
+> *Caption: The whole setup. Take a sequence the model is known to have
+> memorized, show it the first half, and see if the compressed model types the
+> second half back exactly. Measure ordinary skill (perplexity) alongside, so
+> you can tell forgetting from breakage.*
+
 ## Finding one: compression forgets memories faster than skills
 
 The first result is kind of elegant.
@@ -100,10 +106,28 @@ kept **95% of the model's ability while still coughing up 72% of the memorized
 sequences**. Almost none of the usefulness gone, almost all of the memory
 still there for the taking.
 
-And the trend across the three sizes points the wrong way: the fraction of
-memorized data that *survives* compression went up as the models got bigger.
-Larger models are so over-provisioned that a bit of rounding barely disturbs
-them, memories included. The models people actually deploy are a hundred times
+> **[INSERT IMAGE: figures/extraction_curve.png — extraction vs precision]**
+> *Caption: How much memorized data each model still coughs up as you
+> compress it. Down to 8-bit, nothing changes. At 4-bit the small models fall
+> out of the red "majority still leaking" band — but the big 1B model
+> (darkest line) stays right in it.*
+
+Here are the headline numbers at aggressive 4-bit compression:
+
+| Model size | Skill kept | Memorized data still leaking |
+|---|---|---|
+| 160M (small) | 71% | 39% |
+| 410M (medium) | 58% | 27% |
+| **1B (largest)** | **95%** | **72%** |
+
+Read that bottom row again. The billion-parameter model barely noticed the
+compression — it kept almost all its ability — and it still handed back nearly
+three-quarters of the private text it had memorized.
+
+And the trend points the wrong way: the biggest model, the one that best
+survives compression, is also the one that best *keeps its memories* through
+it. Larger models are so over-provisioned that a bit of rounding barely
+disturbs them, memories included. The models people actually deploy are a hundred times
 bigger than my biggest one. Nothing in my data suggests the leak politely
 shrinks again up there. If anything, it grows.
 
@@ -116,7 +140,15 @@ and it removes less of it the bigger your model gets.**
 The result I didn't expect was how *cleanly* the two things separated. There's
 a real, consistent gap between how fast a model loses its memories and how
 fast it loses its skills — a gap you can put a single number on, and one that
-widens with scale. To me that's a small clue about something deeper: that
+widens with scale.
+
+> **[INSERT IMAGE: figures/selectivity_plane.png — the two-axis plot]**
+> *Caption: Every dot is one model at one compression level. Rightward = kept
+> its skill; upward = kept its memories. If the two faded together, dots would
+> sit on the dashed line. They don't — everything falls below it, meaning
+> memory fades faster than skill. The circled dot is the 1B model at 4-bit:
+> far right (skill intact), well below the line (memory gone) — yet still
+> leaking most of what it knew.* To me that's a small clue about something deeper: that
 memorization and general ability aren't the same substance smeared across the
 weights. They seem to live in physically different places, one fragile and one
 robust. There's a recent result showing that quantizing an "unlearned" model
