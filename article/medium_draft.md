@@ -112,15 +112,14 @@ still there for the taking.
 > out of the red "majority still leaking" band — but the big 1B model
 > (darkest line) stays right in it.*
 
-Here are the headline numbers at aggressive 4-bit compression:
+Here are the headline numbers at aggressive 4-bit compression, in the form
+*(skill kept → memorized data still leaking)*:
 
-| Model size | Skill kept | Memorized data still leaking |
-|---|---|---|
-| 160M (small) | 71% | 39% |
-| 410M (medium) | 58% | 27% |
-| **1B (largest)** | **95%** | **72%** |
+- **160M (small):** 71% skill kept → 39% still leaking
+- **410M (medium):** 58% skill kept → 27% still leaking
+- **1B (largest):** **95% skill kept → 72% still leaking**
 
-Read that bottom row again. The billion-parameter model barely noticed the
+Read that last line again. The billion-parameter model barely noticed the
 compression — it kept almost all its ability — and it still handed back nearly
 three-quarters of the private text it had memorized.
 
