@@ -1,0 +1,8 @@
+{
+  "perplexity": 21.223682403564453,
+  "tokens_scored": 102712,
+  "seconds": 132.6,
+  "model": "EleutherAI/pythia-160m-deduped",
+  "quant": "fp4",
+  "corpus": "pile"
+}

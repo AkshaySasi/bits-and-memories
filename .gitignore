@@ -1,0 +1,22 @@
+# the re-downloadable Hugging Face parquet cache (253 MB); regenerated on first run
+data_raw/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# latex build artifacts + local PDF previews
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/preview*/
+paper/*.pdf
+
+# os
+.DS_Store
+Thumbs.db

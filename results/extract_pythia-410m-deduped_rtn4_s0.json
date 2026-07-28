@@ -1,0 +1,10 @@
+{
+  "n": 500,
+  "exact_match": 0.176,
+  "mean_prefix": 9.728,
+  "token_acc": 0.3683125,
+  "seconds": 121.4,
+  "model": "EleutherAI/pythia-410m-deduped",
+  "quant": "rtn4",
+  "seed": 0
+}

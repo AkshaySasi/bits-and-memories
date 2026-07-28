@@ -1,0 +1,7 @@
+{
+  "perplexity": 32.39653015136719,
+  "tokens_scored": 102712,
+  "seconds": 394.0,
+  "model": "EleutherAI/pythia-410m-deduped",
+  "quant": "nf4"
+}

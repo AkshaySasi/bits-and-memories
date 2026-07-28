@@ -1,0 +1,38 @@
+[
+  {
+    "quant": "fp16",
+    "exact": 0.83,
+    "token_acc": 0.921125,
+    "ppl": 12.683207511901855,
+    "mem_retained": 1.0,
+    "cap_retained": 1.0,
+    "selectivity": NaN
+  },
+  {
+    "quant": "int8",
+    "exact": 0.826,
+    "token_acc": 0.9194375,
+    "ppl": 12.716838836669922,
+    "mem_retained": 0.9951807228915662,
+    "cap_retained": 0.9973553706860633,
+    "selectivity": 1.8242770050702377
+  },
+  {
+    "quant": "nf4",
+    "exact": 0.596,
+    "token_acc": 0.7741875,
+    "ppl": 13.300682067871094,
+    "mem_retained": 0.7180722891566265,
+    "cap_retained": 0.9535757224465353,
+    "selectivity": 6.966971462595259
+  },
+  {
+    "quant": "fp4",
+    "exact": 0.46,
+    "token_acc": 0.6431875,
+    "ppl": 14.247210502624512,
+    "mem_retained": 0.5542168674698795,
+    "cap_retained": 0.8902239150299248,
+    "selectivity": 5.075574052049566
+  }
+]
