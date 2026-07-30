@@ -1,5 +1,7 @@
 # Bits and Memories
 
+**Paper:** [arXiv:2607.25451](https://arxiv.org/abs/2607.25451)
+
 Code and data for the paper *Bits and Memories: Measuring Verbatim Extraction
 Across LLM Quantization*.
 
@@ -76,7 +78,6 @@ quantmem/
 results/             per-configuration JSON results used in the paper
 sampled_data/        the exact 500-sequence samples evaluated (one per model)
 figures/             generated figures
-paper/main.tex       the paper source
 ```
 
 ## The RTN quantizer
@@ -90,10 +91,14 @@ and it reproduces the same selective forgetting.
 
 ```bibtex
 @misc{sasi2026bitsandmemories,
-  title  = {Bits and Memories: Measuring Verbatim Extraction Across LLM
-            Quantization},
-  author = {Sasi, Akshay},
-  year   = {2026},
+  title         = {Bits and Memories: Measuring Verbatim Extraction Across LLM
+                   Quantization},
+  author        = {Sasi, Akshay},
+  year          = {2026},
+  eprint        = {2607.25451},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2607.25451},
 }
 ```
 
